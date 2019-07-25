@@ -2,6 +2,7 @@ package za.wethinkcode.swingy.hero;
 
 import java.util.Scanner;
 
+import za.wethinkcode.swingy.HeroReader;
 import za.wethinkcode.swingy.WriteFile;
 
 public class Hero {
@@ -47,9 +48,11 @@ public class Hero {
         String prev = prevHero.nextLine();
         if(prev.equalsIgnoreCase("rangex")) {
             System.out.println("\033[33;1m|======[Hero Stats!]======|\33[33;0m");
+            HeroReader.ReadH();
             System.out.println("displaying rangex data.");
         } else {
             System.out.println("Unknown Hero");
+            chooseHero();
             // System.out.print("\033[32;1m|=====[ Hero Name >> \033[32;0m");
             // String prevv = prevHero.nextLine();
             // if(prevv.equalsIgnoreCase("rangex"))
