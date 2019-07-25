@@ -2,8 +2,11 @@ package za.wethinkcode.swingy.hero;
 
 import java.util.Scanner;
 
+import za.wethinkcode.swingy.WriteFile;
+
 public class Hero {
     public static void createHero(){
+        double id = Math.random();
         Scanner newHero = new Scanner(System.in);
         System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | barbarian ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero level :    1    |    1     |       1      |    1    |     1     ]\033[32;0m");
@@ -33,11 +36,24 @@ public class Hero {
         System.out.print("\033[32;1m|=====[ Your Name   >> \033[32;0m");
         String name = newHero.nextLine();
         System.out.println("\033[33;1mNew Player Created : " + "[" + name + " as a " + choice + "]\033[33;0m");
-        // System.out.print("\033[32;1m|=====[Hero name >> \033[32;0m" + newHero.nextLine() );
-        // System.out.println(newHero.nextLine());
-        // System.out.println("\033[32;1m|======playing as : [-\033[32;0m"
-        //     + player.nextLine().toUpperCase() + "\033[32;1m-]====|\033[32;0m");
+        if(id > 0)
+            id++;
+        WriteFile.getwritefile().writetofile("User : [" + id +  "] , Name : " + name + ", Type : " + choice);
         newHero.close();
     }
-    public static void chooseHero(){}
+    public static void chooseHero(){
+        Scanner prevHero = new Scanner(System.in);
+        System.out.print("\033[32;1m|=====[ Hero Name >> \033[32;0m");
+        String prev = prevHero.nextLine();
+        if(prev.equalsIgnoreCase("rangex")) {
+            System.out.println("\033[33;1m|======[Hero Stats!]======|\33[33;0m");
+            System.out.println("displaying rangex data.");
+        } else {
+            System.out.println("Unknown Hero");
+            // System.out.print("\033[32;1m|=====[ Hero Name >> \033[32;0m");
+            // String prevv = prevHero.nextLine();
+            // if(prevv.equalsIgnoreCase("rangex"))
+        }
+        prevHero.close();
+    }
 }

@@ -1,17 +1,11 @@
 package za.wethinkcode.swingy;
 
-// import java.sql.Connection;
 import java.util.Scanner;
 
 import za.wethinkcode.swingy.hero.Hero;
-// import za.wethinkcode.swingy.Db_Conn;
 
 public class App {
     public static void main( String[] args ) {
-        // Db_Conn obj = new Db_Conn();
-        // Connection connection = null;
-        // connection = obj.getConn();
-        // System.out.println(connection);
         if(args.length == 1) {
             if(args[0].equals("gui")) {
                 System.out.println("\033[31;1m|=====[Gui still under construction!]=====|\033[31;0m");
@@ -22,7 +16,7 @@ public class App {
                 System.out.println("\033[32;1m|==============[-SWINGY-]===============|\033[32;0m");
                 System.out.println("\033[33;1m|=======================================|\033[33;0m");
                 System.out.println("\033[32;1m|=======[Create a hero : Enter 1]=======|\033[32;0m");
-                System.out.println("\033[32;1m|=====[use privious hero : Enter 2]=====|\033[32;0m");
+                  System.out.println("\033[32;1m|=====[use privious hero : Enter 2]=====|\033[32;0m");
 
                 Scanner choice = new Scanner(System.in);
                 System.out.print("\033[33;1m|=====[What will it be >> \033[33;0m");
