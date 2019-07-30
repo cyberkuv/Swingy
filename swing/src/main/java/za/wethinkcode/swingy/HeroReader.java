@@ -15,6 +15,9 @@ public class HeroReader {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             while((line = bufferedReader.readLine()) != null) {
                 System.out.println(line);
+                if(line.equals("[1.5947730780264913] [slingshot] [gun slinger]")) {
+                    System.out.println("read first line of data");
+                }
             }
             bufferedReader.close();
         } catch (FileNotFoundException e) {
