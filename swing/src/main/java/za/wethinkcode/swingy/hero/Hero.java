@@ -15,9 +15,9 @@ public class Hero {
         System.out.println("\033[32;1m[ Hero Atk   :    5    |    7     |       9      |    9    |     11    ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero Def   :    11   |    6     |       4      |    4    |     2     ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero Hp    :    5    |    5     |       5      |    5    |     5     ]\033[32;0m");
-        System.out.println("\033[33;1m[   Weapon   :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
-        System.out.println("\033[33;1m[   Armor    :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
-        System.out.println("\033[33;1m[   Helm     :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
+        System.out.println("\033[33;1m[ Weapon     :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
+        System.out.println("\033[33;1m[ Armor      :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
+        System.out.println("\033[33;1m[ Helm       :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
         System.out.print("\033[32;1m[Your Choice] >> \033[32;0m");
         String choice = newHero.nextLine();
         if(choice.equalsIgnoreCase("wizard")){
