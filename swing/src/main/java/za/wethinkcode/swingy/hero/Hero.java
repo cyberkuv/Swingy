@@ -6,8 +6,12 @@ import za.wethinkcode.swingy.HeroReader;
 import za.wethinkcode.swingy.WriteFile;
 
 public class Hero {
+    private static String name;
+    private static String class;
+    private static int lvl;
+    private static int exp;
+    private static int hp;
     public static void createHero(){
-        double id = Math.random();
         Scanner newHero = new Scanner(System.in);
         System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | barbarian ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero level :    1    |    1     |       1      |    1    |     1     ]\033[32;0m");
@@ -15,9 +19,6 @@ public class Hero {
         System.out.println("\033[32;1m[ Hero Atk   :    5    |    7     |       9      |    9    |     11    ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero Def   :    11   |    6     |       4      |    4    |     2     ]\033[32;0m");
         System.out.println("\033[32;1m[ Hero Hp    :    5    |    5     |       5      |    5    |     5     ]\033[32;0m");
-        System.out.println("\033[33;1m[ Weapon     :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
-        System.out.println("\033[33;1m[ Armor      :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
-        System.out.println("\033[33;1m[ Helm       :    0    |    0     |       0      |    0    |     0     ]\033[33;0m");
         System.out.print("\033[32;1m[Your Choice] >> \033[32;0m");
         String choice = newHero.nextLine();
         if(choice.equalsIgnoreCase("wizard")){
@@ -35,11 +36,9 @@ public class Hero {
             createHero();
         }
         System.out.print("\033[32;1m[Your Name] >> \033[32;0m");
-        String name = newHero.nextLine();
+        name = newHero.nextLine();
         System.out.println("\033[33;1mNew Player Created : " + "[" + name + " as a " + choice + "]\033[33;0m");
-        if(id > 0)
-            id++;
-        WriteFile.getwritefile().writetofile( "[" + id + "]" +  " [" + name + "] [" + choice + "]");
+        WriteFile.getwritefile().writetofile(name + ", " + choice);
         newHero.close();
     }
     public static void chooseHero(){
