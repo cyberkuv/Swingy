@@ -7,38 +7,39 @@ import za.wethinkcode.swingy.WriteFile;
 
 public class Hero {
     private static String name;
-    private static String class;
-    private static int lvl;
-    private static int exp;
-    private static int hp;
+    private static String hClass;
+    private static int lvl = 0;
+    private static int exp = 0;
+    private static int hp = 0;
     public static void createHero(){
         Scanner newHero = new Scanner(System.in);
-        System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | barbarian ]\033[32;0m");
-        System.out.println("\033[32;1m[ Hero level :    1    |    1     |       1      |    1    |     1     ]\033[32;0m");
-        System.out.println("\033[32;1m[ Hero Exp   :    0    |    0     |       0      |    0    |     0     ]\033[32;0m");
-        System.out.println("\033[32;1m[ Hero Atk   :    5    |    7     |       9      |    9    |     11    ]\033[32;0m");
-        System.out.println("\033[32;1m[ Hero Def   :    11   |    6     |       4      |    4    |     2     ]\033[32;0m");
-        System.out.println("\033[32;1m[ Hero Hp    :    5    |    5     |       5      |    5    |     5     ]\033[32;0m");
-        System.out.print("\033[32;1m[Your Choice] >> \033[32;0m");
-        String choice = newHero.nextLine();
-        if(choice.equalsIgnoreCase("wizard")){
+        System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | archer ]\033[32;0m");
+        // System.out.println("\033[32;1m[ Hero level :    1    |    1     |       1      |    1    |     1     ]\033[32;0m");
+        // System.out.println("\033[32;1m[ Hero Exp   :    0    |    0     |       0      |    0    |     0     ]\033[32;0m");
+        // System.out.println("\033[32;1m[ Hero Atk   :    5    |    7     |       9      |    9    |     11    ]\033[32;0m");
+        // System.out.println("\033[32;1m[ Hero Def   :    11   |    6     |       4      |    4    |     2     ]\033[32;0m");
+        // System.out.println("\033[32;1m[ Hero Hp    :    5    |    5     |       5      |    5    |     5     ]\033[32;0m");
+        System.out.print("\033[32;1m[Your class] >> \033[32;0m");
+        hClass = newHero.nextLine();
+        if(hClass.equalsIgnoreCase("wizard")){
             System.out.println("\033[33;1m[Choose a wizard.]\033[33;0m");
-        } else if (choice.equalsIgnoreCase("warrior")) {
+        } else if (hClass.equalsIgnoreCase("warrior")) {
             System.out.println("\033[33;1m[Choose a warrior.]\033[33;0m");
-        } else if (choice.equalsIgnoreCase("Gun Slinger")) {
+        } else if (hClass.equalsIgnoreCase("Gun Slinger")) {
             System.out.println("\033[33;1m[Choose a Gun Slinger.]\033[33;0m");
-        } else if (choice.equalsIgnoreCase("ranger")) {
+        } else if (hClass.equalsIgnoreCase("ranger")) {
             System.out.println("\033[33;1m[Choose a ranger.]\033[33;0m");
-        } else if (choice.equalsIgnoreCase("barbarian")) {
-            System.out.println("\033[33;1m[Choose a barbarian.]\033[33;0m");
+        } else if (hClass.equalsIgnoreCase("archer")) {
+            System.out.println("\033[33;1m[Choose an archer.]\033[33;0m");
         } else {
             System.out.println("\033[31;1m[unknown class!]\033[31;0m");
             createHero();
         }
         System.out.print("\033[32;1m[Your Name] >> \033[32;0m");
         name = newHero.nextLine();
-        System.out.println("\033[33;1mNew Player Created : " + "[" + name + " as a " + choice + "]\033[33;0m");
-        WriteFile.getwritefile().writetofile(name + ", " + choice);
+        System.out.println("\033[33;1m[New Hero Created!]\033[33;0m");
+        WriteFile.getwritefile().writetofile(name + ", " + hClass + ", " + lvl + ", " + exp + ", " + hp);
+        System.out.println("\033[33;1m[Hero logged to Hero database]\033[33;0m");
         newHero.close();
     }
     public static void chooseHero(){
