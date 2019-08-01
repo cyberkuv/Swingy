@@ -6,7 +6,7 @@ import za.wethinkcode.swingy.HeroReader;
 import za.wethinkcode.swingy.WriteFile;
 
 public class Hero {
-    private static String name;
+    public static String name;
     private static String hClass;
     private static int lvl = 0;
     private static int exp = 0;
@@ -14,11 +14,6 @@ public class Hero {
     public static void createHero(){
         Scanner newHero = new Scanner(System.in);
         System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | archer ]\033[32;0m");
-        // System.out.println("\033[32;1m[ Hero level :    1    |    1     |       1      |    1    |     1     ]\033[32;0m");
-        // System.out.println("\033[32;1m[ Hero Exp   :    0    |    0     |       0      |    0    |     0     ]\033[32;0m");
-        // System.out.println("\033[32;1m[ Hero Atk   :    5    |    7     |       9      |    9    |     11    ]\033[32;0m");
-        // System.out.println("\033[32;1m[ Hero Def   :    11   |    6     |       4      |    4    |     2     ]\033[32;0m");
-        // System.out.println("\033[32;1m[ Hero Hp    :    5    |    5     |       5      |    5    |     5     ]\033[32;0m");
         System.out.print("\033[32;1m[Your class] >> \033[32;0m");
         hClass = newHero.nextLine();
         if(hClass.equalsIgnoreCase("wizard")){

@@ -3,6 +3,8 @@ package za.wethinkcode.swingy;
 import java.util.Random;
 import java.util.Scanner;
 
+import za.wethinkcode.swingy.hero.Hero;
+
 // import za.wethinkcode.swingy.hero.Hero;
 
 public class App {
@@ -14,10 +16,12 @@ public class App {
         int maxEnemyHealth = 50;
         int enemyAtkDamage = 10;
         // Player variable
+        // Hero h = new Hero();
+        // String name1 = h.name;
         int health = 100;
         int atkDamage = 25;
         int numHealthPotions = 3;
-        int healthPotHealAmnt = 30;
+        int healthPotHealAmnt = 3;
         int healthPotDropChance = 35; //percentage
         boolean running = true;
         if(args.length == 1) {
@@ -26,6 +30,18 @@ public class App {
             } else if (args[0].equals("console")) {
                 System.out.println("\033[32;1m[Welcome Sir/Madam]\033[32;0m");
                 System.out.println("\033[32;1m[-SWING SWING-]\033[32;0m");
+                System.out.println("\033[32;1m[Possible options : 1 = Create a hero, 2 = use privious Hero]\033[32;0m");
+                System.out.print("\033[33;1m> input > \033[33;0m");
+                String first = choice.nextLine();
+                if(first.equals("1")) {
+                    System.out.println("\033[33;1m[Hero Stats!]\33[33;0m");
+                    Hero.createHero();
+                } else if(first.equals("2")) {
+                    System.out.println("\033[33;1m[Choose to use a privious hero.]\033[33;0m");
+                    Hero.chooseHero();
+                } else {
+                    System.out.println("\033[31;1m> Unknown Option\033[31;0m");
+                }
                 GAME:
                 while(running) {
                     int enemyHealth = random.nextInt(maxEnemyHealth);
@@ -94,7 +110,7 @@ public class App {
                     System.out.println("\033[32;1m[Thanks for playing]\033[32;0m");
                     System.out.println("\033[32;1m[-SWING SWING-]\033[32;0m");
                 }
-            //     System.out.println("\033[32;1m[Create a hero : Enter 1]\033[32;0m");
+            //     System.out.println("\033[32;1m[Possible options : 1 = Create a hero, 2 = use privious Hero]\033[32;0m");
             //     System.out.println("\033[32;1m[use privious hero : Enter 2]\033[32;0m");
             //     System.out.print("\033[33;1m[What will it be] >> \033[33;0m");
             //     String choice1 = choice.nextLine();
