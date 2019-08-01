@@ -22,7 +22,7 @@ public class App {
         boolean running = true;
         if(args.length == 1) {
             if(args[0].equals("gui")) {
-                System.out.println("\033[31;1m|=====[Gui still under construction!]=====|\033[31;0m");
+                System.out.println("\033[31;1m[Gui still under construction!]\033[31;0m");
             } else if (args[0].equals("console")) {
                 System.out.println("\033[32;1m[Welcome Sir/Madam]\033[32;0m");
                 System.out.println("\033[32;1m[-SWING SWING-]\033[32;0m");
@@ -30,64 +30,64 @@ public class App {
                 while(running) {
                     int enemyHealth = random.nextInt(maxEnemyHealth);
                     String enemy = enemies[random.nextInt(enemies.length)];
-                    System.out.println(enemy + " has appeared!");
+                    System.out.println("\033[31;1m> " + enemy + " has appeared!\033[31;0m");
 
                     while(enemyHealth > 0) {
-                        System.out.println("> Your health : " + health);
-                        System.out.println(enemy + "'s health : " + enemyHealth);
-                        System.out.println("> Possible actions : 1 = attack, 2 = Drink health potion, 3 = Run!");
+                        System.out.println("\033[32;1m> Your health : " + health + "\033[33;0m");
+                        System.out.println("\033[31;1m> " + enemy + "'s health : " + enemyHealth + "\033[31;0m");
+                        System.out.println("\033[33;1m> Possible actions : 1 = attack, 2 = Drink health potion, 3 = Run!\033[33;0m");
 
-                        System.out.print("> input > ");
+                        System.out.print("\033[33;1m> input > \033[33;0m");
                         String input = choice.nextLine();
                         if(input.equals("1")) {
-                            int damageDealt = random.nextInt(atkDamage);
-                            int damageTaken = random.nextInt(enemyAtkDamage);
+                            int damageDealt = atkDamage;
+                            int damageTaken = enemyAtkDamage;
 
                             enemyHealth -= damageDealt;
                             health -= damageTaken;
-                            System.out.println("> Striked " + enemy + "for damege = " + damageDealt);
-                            System.out.println("> Your recieved " + damageTaken + " in retaliation");
+                            System.out.println("\033[32;1m> " + enemy + " takes damage = " + damageDealt + "\033[32;0m");
+                            System.out.println("\033[31;1m> Damage taken = " + damageTaken + ", in retaliation\033[31;0m");
 
                             if(health < 1) { 
-                                System.out.println("> You have taken too much damage, you are too weak to go on!");
+                                System.out.println("\033[31;1m> You have sustained too much damage and are too weak to go on!\033[31;0m");
                                 break ;
                             }
                         } else if(input.equals("2")) {
                             if(numHealthPotions > 0) {
                                 health += healthPotHealAmnt;
                                 numHealthPotions--;
-                                System.out.println("> Drank health potion. Health increased by = " + healthPotHealAmnt + "." + "\n"
+                                System.out.println("\033[32;1m> Drank health potion. Health increased by = " + healthPotHealAmnt + "." + "\n"
                                                     + "> Current health = " + health + " hp."
-                                                    + "> You have " + numHealthPotions + " health potions left.");
+                                                    + "> You have " + numHealthPotions + " health potions left.\033[32;0m");
                             } else {
-                                System.out.println("> no health potions left. Defeat enemies to get more potions.");
+                                System.out.println("\033[31;1m> no health potions left. Defeat enemies to get more potions.\033[31;0m");
                             }
                         } else if(input.equals("3")) {
-                            System.out.println("> You ran away from enemy " + enemy + "!");
+                            System.out.println("\033[33;1m> You ran away from enemy " + enemy + "!\033[33;0m");
                             continue GAME;
-                        } else { System.out.println("> Unknown Option"); }
+                        } else { System.out.println("\033[31;1m> Unknown Option\033[31;0m"); }
                     }
                     if(health < 1) {
-                        System.out.println("> Leaves the dungeon in a weakened state!");
+                        System.out.println("\033[31;1m> Leaves the dungeon in a weakened state!\033[31;0m");
                     }
-                    System.out.println("> " + enemy + " defeated!");
-                    System.out.println("> Current Health = " + health + " Hp left.");
+                    System.out.println("\033[32;1m> " + enemy + " defeated!\033[32;0m");
+                    System.out.println("\033[33;1m> Current Health = " + health + " Hp left.\033[33;0m");
                     if(random.nextInt(100) > healthPotDropChance) {
                         numHealthPotions++;
-                        System.out.println("> The " + enemy + " dropped a health potion");
-                        System.out.println("> Health potions = " + numHealthPotions + ".");
-                        System.out.println("> Possible actions : 1 = Continue fighting, 2 = Exit the game!");
+                        System.out.println("\033[32;1m> The " + enemy + " dropped a health potion\033[32;0m");
+                        System.out.println("\033[32;1m> Health potions = " + numHealthPotions + ".\033[32;0m");
+                        System.out.println("\033[33;1m> Possible actions : 1 = attack, 2 = Drink health potion, 3 = Run!\033[33;0m");
 
-                        System.out.print("> input > ");
+                        System.out.print("\033[33;1m> input > \033[33;0m");
                         String input2 = choice.nextLine();
                         while(!input2.equals("1") && !input2.equals("2")) {
-                            System.out.println("> Unknown Option");
+                            System.out.println("\033[31;1m> Unknown Option\033[31;0m");
                             input2 = choice.nextLine();
                         }
                         if(input2.equals("1")) {
-                            System.out.println("> Choose to continue with adventure.");
+                            System.out.println("\033[32;1m> Choose to continue with adventure.\033[32;0m");
                         } else if(input2.equals("2")) {
-                            System.out.println("> Exits the dungeon!");
+                            System.out.println("\033[31;1m]> Exits the dungeon!\033[31;0m");
                             break ;
                         }
                     }
@@ -112,6 +112,8 @@ public class App {
             } else {
                 System.out.println("\033[31;1m[You have to pass an argument of either gui or console.]\033[31;0m");
             }
+        } else {
+            System.out.println("\033[31;1m[takes in one arguement]\033[31;0m");
         }
         choice.close();
     }
