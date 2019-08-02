@@ -1,5 +1,5 @@
 creating a new project with maven :
-	mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quick		start -DarchetypeVersion=1.4 -DinteractiveMode=false
+	mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 
 Building the project/compling :
 	mvn package

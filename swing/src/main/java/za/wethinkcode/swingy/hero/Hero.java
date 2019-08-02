@@ -4,13 +4,14 @@ import java.util.Scanner;
 
 import za.wethinkcode.swingy.HeroReader;
 import za.wethinkcode.swingy.WriteFile;
+import za.wethinkcode.swingy.Game.Launch;
 
 public class Hero {
     public static String name;
     private static String hClass;
-    private static int lvl = 0;
-    private static int exp = 0;
-    private static int hp = 0;
+    private static int lvl = 1;
+    private static int exp = 1;
+    private static int hp = 60;
     public static void createHero(){
         Scanner newHero = new Scanner(System.in);
         System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | archer ]\033[32;0m");
@@ -35,6 +36,16 @@ public class Hero {
         System.out.println("\033[33;1m[New Hero Created!]\033[33;0m");
         WriteFile.getwritefile().writetofile(name + ", " + hClass + ", " + lvl + ", " + exp + ", " + hp);
         System.out.println("\033[33;1m[Hero logged to Hero database]\033[33;0m");
+        System.out.println("1 = Launch Battle, 2 = Create new Hero");
+        System.out.print("\033[32;1m[input] >> \033[32;0m");
+        String other = newHero.nextLine();
+        if(other.equals("1")) {
+            System.out.println("Choose to launch battle");
+            Launch.gameLaunch();
+        } else if (other.equals("2")) {
+            System.out.println("Choose to create another Hero");
+            createHero();
+        } else { System.out.println("unknown option"); }
         newHero.close();
     }
     public static void chooseHero(){
