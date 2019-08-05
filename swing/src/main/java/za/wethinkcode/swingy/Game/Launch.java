@@ -3,19 +3,29 @@ package za.wethinkcode.swingy.Game;
 import java.util.Random;
 import java.util.Scanner;
 
+import za.wethinkcode.swingy.hero.Hero;
+
 public class Launch {
     public static void gameLaunch() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         String[] enemies = { "skeleton", "zombie", "Assassin", "witch", "wizard", "fairy" };
         int maxEnemyHealth = 50;
-        int enemyAtkDamage = 10;
+        int enemyAtkDamage = 35;
         int health = 60;
-        int atkDamage = 25;
+        // int def = 10;
+        int lvl = 1;
+        int exp = 1;
+        int atkDamage = 40;
         int numHealthPotions = 3;
         int healthPotHealAmnt = 3;
         int healthPotDropChance = 35; // percentage
         boolean running = true;
+        // Hero hero = new Hero();
+        System.out.println("\033[30;1m|----------------------------------------------------------|\033[30;0m");
+        System.out.println("\033[32;1m\t\t" + "> Hero Name  : " + Hero.name + ".\n\t\t" + "> Class      : " + Hero.hClass + ".\n\t\t" + "> Level      : "
+                            + lvl + ".\n\t\t" + "> Experience : " + exp + ".\n\t\t" + "> Hp         : " + health + ".\033[32;0m");
+        System.out.println("\033[30;1m|----------------------------------------------------------|\033[30;0m");
         GAME: while (running) {
             int enemyHealth = random.nextInt(maxEnemyHealth);
             String enemy = enemies[random.nextInt(enemies.length)];
@@ -30,8 +40,8 @@ public class Launch {
                 System.out.print("\033[33;1m> input > \033[33;0m");
                 String input = scanner.nextLine();
                 if (input.equals("1")) {
-                    int damageDealt = atkDamage;
-                    int damageTaken = enemyAtkDamage;
+                    int damageDealt = random.nextInt(atkDamage);
+                    int damageTaken = random.nextInt(enemyAtkDamage);
 
                     enemyHealth -= damageDealt;
                     health -= damageTaken;
@@ -62,7 +72,8 @@ public class Launch {
                 }
             }
             if (health < 1) {
-                System.out.println("\033[31;1m> Leaves the dungeon in a weakened state!\033[31;0m");
+                System.out.println("\033[31;1m" + Hero.name + " Lost\033[31;0m");
+                System.exit(-1);
             }
             System.out.println("\033[32;1m> " + enemy + " defeated!\033[32;0m");
             System.out.println("\033[33;1m> Current Health = " + health + " Hp left.\033[33;0m");
@@ -86,8 +97,8 @@ public class Launch {
                 }
             }
         }
-        System.out.println("\033[32;1m[Thanks for playing]\033[32;0m");
-        System.out.println("\033[32;1m[-SWING SWING-]\033[32;0m");
+        System.out.println("\t\t\033[32;1m[Thanks for playing]\033[32;0m");
+        System.out.println("\t\t\033[32;1m  [-SWING SWING-]\033[32;0m");
         scanner.close();
     }
 }
