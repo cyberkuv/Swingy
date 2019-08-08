@@ -1,48 +1,94 @@
 package za.wethinkcode.swingy.GUI;
 
 import java.awt.Color;
-import java.awt.Panel;
+import java.awt.Font;
+// import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 
 public class Gui {
-    JFrame f = new JFrame("_SWINGY SWINGY_");
+    JFrame frame = new JFrame("_SWINGY SWINGY_");
+    JButton b1 = new JButton("New Hero");
+    JButton b2 = new JButton("Prev Hero");
     Gui() {
-        JButton b1 = new JButton("New Hero");
-        JButton b2 = new JButton("Prev Hero");
-        f.setBackground(Color.BLACK);
-        f.getContentPane().setBackground(Color.BLACK);
+        frame.setBackground(Color.BLACK);
+        frame.getContentPane().setBackground(Color.BLACK);
 
+        NewHero();
+        PrevHero();
+        frame.setSize(700, 800);
+        frame.setLayout(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    public void NewHero() {
+        b1.setForeground(Color.BLACK);
         b1.setBounds(250, 250, 150, 40);
-        b1.setBackground(Color.GRAY);
+        b1.setBackground(Color.GREEN);
         b1.setBorderPainted(false);
         b1.setContentAreaFilled(false);
         b1.setOpaque(true);
+
         b1.addActionListener(new ActionListener(){
+            JButton notClickableText = new JButton("-Hero Creation-");
             @Override
             public void actionPerformed(ActionEvent e) {
-                NewHero();
+                notClickableText.setForeground(Color.GREEN);
+                notClickableText.setBounds(200, 5, 300, 40);
+                notClickableText.setBackground(Color.BLACK);
+                notClickableText.setBorderPainted(false);
+                notClickableText.setContentAreaFilled(false);
+                notClickableText.setOpaque(true);
+                notClickableText.setFont(new Font("Arial", Font.BOLD, 30));
+
+                JPanel panel = new JPanel();
+                Border border = BorderFactory.createLineBorder(Color.GREEN);
+                panel.setBounds(25, 60, 650, 600);
+                panel.setBorder(border);
+                panel.setBackground(Color.BLACK);
+                panel.setForeground(Color.GREEN);
+
+                JButton create = new JButton("-Create-");
+                create.setForeground(Color.BLACK);
+                create.setBounds(250, 690, 200, 40);
+                create.setBackground(Color.GREEN);
+                create.setBorderPainted(false);
+                create.setContentAreaFilled(false);
+                create.setOpaque(true);
+                create.setFont(new Font("Arial", Font.BOLD, 30));
+
+                System.out.println("Clicked New Hero Button");
+                frame.getContentPane().removeAll();
+                frame.getContentPane().add(panel);
+                frame.getContentPane().add(notClickableText);
+                frame.getContentPane().add(create);
+                frame.revalidate();
+                frame.repaint();
             }
         });
 
+        frame.add(b1);
+    }
+
+    public void PrevHero() {
+        b2.setForeground(Color.BLACK);
         b2.setBounds(250, 450, 150, 40);
-        b2.setBackground(Color.GRAY);
+        b2.setBackground(Color.GREEN);
         b2.setBorderPainted(false);
         b2.setContentAreaFilled(false);
         b2.setOpaque(true);
+        b2.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Clicked Prev Hero Button");
+            }
+        });
 
-        f.add(b1);
-        f.add(b2);
-        f.setSize(700, 800);
-        f.setLayout(null);
-        f.setVisible(true);
-    }
-    public void NewHero() {
-        Panel panel = new Panel();
-        panel.setBackground(Color.GRAY);
-        f.add(panel);
+        frame.add(b2);
     }
     public static void main(String[] args) { new Gui(); }
 }

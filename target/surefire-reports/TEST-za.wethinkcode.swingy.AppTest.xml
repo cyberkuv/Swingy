@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="za.wethinkcode.swingy.AppTest" time="0.03" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="za.wethinkcode.swingy.AppTest" time="0.029" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
     <property name="java.specification.version" value="11"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/goinfre/eonwe/Documents/swingy/target/test-classes:/goinfre/eonwe/Documents/swingy/target/classes:/goinfre/eonwe/.m2/repository/junit/junit/4.11/junit-4.11.jar:/goinfre/eonwe/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/goinfre/eonwe/Desktop/swingy/target/test-classes:/goinfre/eonwe/Desktop/swingy/target/classes:/goinfre/eonwe/.m2/repository/junit/junit/4.11/junit-4.11.jar:/goinfre/eonwe/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -16,10 +16,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="ZA"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/goinfre/eonwe/Documents/swingy/target/surefire/surefirebooter14566096626346838474.jar /goinfre/eonwe/Documents/swingy/target/surefire 2019-08-07T14-24-20_820-jvmRun1 surefire15489139838412504723tmp surefire_05987451151718334850tmp"/>
+    <property name="sun.java.command" value="/goinfre/eonwe/Desktop/swingy/target/surefire/surefirebooter15365531305662604669.jar /goinfre/eonwe/Desktop/swingy/target/surefire 2019-08-08T14-46-51_646-jvmRun1 surefire10297607275567424138tmp surefire_014490106320951747342tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/goinfre/eonwe/Documents/swingy/target/test-classes:/goinfre/eonwe/Documents/swingy/target/classes:/goinfre/eonwe/.m2/repository/junit/junit/4.11/junit-4.11.jar:/goinfre/eonwe/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/goinfre/eonwe/Desktop/swingy/target/test-classes:/goinfre/eonwe/Desktop/swingy/target/classes:/goinfre/eonwe/.m2/repository/junit/junit/4.11/junit-4.11.jar:/goinfre/eonwe/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/goinfre/eonwe"/>
     <property name="user.language" value="en"/>
@@ -27,13 +27,13 @@
     <property name="java.version.date" value="2019-04-16"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/goinfre/eonwe/Documents/swingy"/>
+    <property name="basedir" value="/goinfre/eonwe/Desktop/swingy"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/goinfre/eonwe/Documents/swingy/target/surefire/surefirebooter14566096626346838474.jar"/>
+    <property name="surefire.real.class.path" value="/goinfre/eonwe/Desktop/swingy/target/surefire/surefirebooter15365531305662604669.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="11.0.3+12-LTS"/>
@@ -48,7 +48,7 @@
     <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="/var/folders/zz/zyxvpxvq6csfxvn_n0000mcc000533/T/"/>
     <property name="java.version" value="11.0.3"/>
-    <property name="user.dir" value="/goinfre/eonwe/Documents/swingy"/>
+    <property name="user.dir" value="/goinfre/eonwe/Desktop/swingy"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>

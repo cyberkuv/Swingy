@@ -57,7 +57,7 @@ public class Launch {
                         health += healthPotHealAmnt;
                         numHealthPotions--;
                         System.out.println("\033[32;1m> Drank health potion. Health increased by = " + healthPotHealAmnt
-                                + "." + "\n" + "> Current health = " + health + " hp." + "> You have "
+                                + "." + "\n" + "> Current health = " + health + " hp." + "\n> You have "
                                 + numHealthPotions + " health potions left.\033[32;0m");
                     } else {
                         System.out.println(
