@@ -9,8 +9,9 @@ import za.wethinkcode.swingy.GAME.*;
 public class Hero {
     public static String name;
     public static String hClass;
-    public static int lvl = 1;
-    public static int exp = 1;
+    public static int lvl = 0;
+    public static int lvlUp = lvl * 1000 + ((lvl - 1) * (lvl - 1)) * 450;
+    public static int xp = 0;
     public static int hp = 60;
     public static void createHero(){
         Scanner newHero = new Scanner(System.in);
@@ -34,7 +35,7 @@ public class Hero {
         System.out.print("\033[32;1m> Name > \033[32;0m");
         name = newHero.nextLine();
         System.out.println("\033[33;1m[New Hero Created!]\033[33;0m");
-        Writer.getWriter().writetofile(name + ", " + hClass + ", " + lvl + ", " + exp + ", " + hp);
+        Writer.getWriter().writetofile(name + ", " + hClass + ", " + lvl + ", " + xp + ", " + hp);
         System.out.println("\033[33;1m[Hero logged to Hero database]\033[33;0m");
         System.out.println("\033[33;1m> Possible actions : 1 = Launch Battle, 2 = Create New Hero.\033[33;0m");
         System.out.print("\033[32;1m> input > \033[32;0m");
