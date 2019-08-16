@@ -18,12 +18,13 @@ public class Launch {
 
     public static void gameLaunch() {
         // boolean running = true;
-        System.out.println("\033[30;1m|----------------------------------------------------------|\033[30;0m");
+        System.out.println("\033[30;1m|--------------------------------------------------------------------|\033[30;0m");
         System.out.println("\033[32;1m\t\t" + "> Hero Name  : " + Hero.name + ".\n\t\t" + "> Class      : "
                 + Hero.hClass + ".\n\t\t" + "> Level      : " + Hero.lvl + ".\n\t\t" + "> Experience : " + Hero.xp + ".\n\t\t"
                 + "> Hp         : " + health + ".\033[32;0m");
-        System.out.println("\033[30;1m|----------------------------------------------------------|\033[30;0m");
+        System.out.println("\033[30;1m|--------------------------------------------------------------------|\033[30;0m");
         Map.genMap();
+        Map.movement();
         // GAME: while (running) {
         //     int enemyHealth = random.nextInt(maxEnemyHealth);
         //     String enemy = enemies[random.nextInt(enemies.length)];
@@ -97,8 +98,8 @@ public class Launch {
         //         }
         //     }
         // }
-        System.out.println("\t\t\033[32;1m[Thanks for playing]\033[32;0m");
-        System.out.println("\t\t\033[32;1m  [-SWING SWING-]\033[32;0m");
+        System.out.println("\t\t\t\033[32;1m[Thanks for playing]\033[32;0m");
+        System.out.println("\t\t\t\033[32;1m  [-SWING SWING-]\033[32;0m");
         scanner.close();
     }
 }

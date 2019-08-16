@@ -9,7 +9,7 @@ import za.wethinkcode.swingy.GAME.*;
 public class Hero {
     public static String name;
     public static String hClass;
-    public static int lvl = 0;
+    public static int lvl = 1;
     public static int lvlUp = lvl * 1000 + ((lvl - 1) * (lvl - 1)) * 450;
     public static int xp = 0;
     public static int hp = 60;
