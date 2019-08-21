@@ -1,0 +1,10 @@
+Cyane, Cyborg, 1, 0, 12, 10, 30
+Raygard, Archer, 1, 0, 12, 10, 30
+merlin, Knight, 1, 0, 12, 10, 30
+wixxer, Wizard, 1, 0, 12, 10, 30
+niker, Knight, 1, 0, 12, 10, 30
+rayminx, Cyborg, 1, 0, 12, 10, 30
+minxer, Archer, 1, 0, 12, 10, 30
+kaynn, Knight, 1, 0, 12, 10, 30
+wix, Wizard, 1, 0, 12, 10, 30
+ray, Knight, 7, 0, 12, 10, 30

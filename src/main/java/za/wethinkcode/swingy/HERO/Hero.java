@@ -13,6 +13,8 @@ public class Hero {
     public static int lvlUp = lvl * 1000 + ((lvl - 1) * (lvl - 1)) * 450;
     public static int xp = 0;
     public static int hp = 60;
+    public static int x;
+    public static int y;
     public static void createHero(){
         Scanner newHero = new Scanner(System.in);
         System.out.println("\033[32;1m[ Hero class : Wizard  | Worrior  | Gun Slinger  | ranger  | archer ]\033[32;0m");

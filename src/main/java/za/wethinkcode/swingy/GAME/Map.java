@@ -49,13 +49,15 @@ public class Map {
 
     public static void genPlayer(int hero) {
         for(int p = 0; p != occupied; p++) {
-            board[mapSize / 2][mapSize / 2] = hero;
+            // board[mapSize / 2][mapSize / 2] = hero;
+            board[Hero.x = mapSize / 2][Hero.y = mapSize / 2] = hero;
         }
     }
 
     public static void movement() {
         Scanner scanner = new Scanner(System.in);
         String move = scanner.nextLine();
+
         if(move.equalsIgnoreCase("1")){
             System.out.println("Choose to go north");
         } else {
