@@ -8,3 +8,4 @@ minxer, Archer, 1, 0, 12, 10, 30
 kaynn, Knight, 1, 0, 12, 10, 30
 wix, Wizard, 1, 0, 12, 10, 30
 ray, Knight, 7, 0, 12, 10, 30
+Emmanuel, Wizard, 7, 0, 12, 10, 30
