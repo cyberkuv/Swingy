@@ -1,8 +1,6 @@
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/HERO/Hero.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/GAME/Launch.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/READER/Reader.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/GUI/Gui.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/GAME/Map.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/App.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/WRITER/Writer.java
-/homes/eonwe/Documents/swingy/src/main/java/za/wethinkcode/swingy/CORDS/Coordinates.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/main/Play.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/App.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/model/Hero.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/controller/GamePlay.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/controller/game.java
+/homes/eonwe/Documents/swingy2.0/swingy/src/main/java/com/wethinkcode/swingy/views/Style.java

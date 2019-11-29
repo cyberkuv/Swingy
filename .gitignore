@@ -1,4 +1,5 @@
 *.classpath
 *.project
-Heros.txt
+text.txt
 *.class
+/target/classes/*.class
