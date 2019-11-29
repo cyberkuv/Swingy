@@ -1,3 +1,3 @@
 # swingy
 
-This project is incomplete!
+Completed!, please feel free to clone and play!
