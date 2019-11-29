@@ -50,6 +50,7 @@ public class Hero {
             System.out.println("\033[32;1m[--------------------------------\033[33;1mSWING SWING\033[32;1m----------------------------------]\033[32;0m");
             System.out.println("\033[32;1m[-----------------------------------------------------------------------------]\033[32;0m");
             Launch.genMap(x, y);
+            Launch.player(Launch.hero, x, y);
         } else if (other.equals("2")) {
             createHero();
         } else { System.out.println("\033[31;1m[-Unknown Option-]\033[31;0m"); }

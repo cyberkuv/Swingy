@@ -43,7 +43,7 @@ public class Launch {
         System.out.println("\033[32;1m[-Number of Enemies : " + occupied + "-]\033[32;0m");
         System.out.println("\033[32;1m[-Map size : " + size + " X " + size + "-]\033[32;0m");
         System.out.println("\033[32;1m[-Hero Level : " + Hero.lvl + "-]\033[32;0m");
-        player(hero, xc, yc);
+        // player(hero, xc, yc);
     }
 
     public static void player(char hero, int x, int y) {
@@ -63,14 +63,17 @@ public class Launch {
             y++;
             System.out.println(y);
             System.out.println("east");
+            genMap(x, y);
         } else if(mv.equalsIgnoreCase("s")) {
             x--;
             System.out.println(x);
             System.out.println("south");
+            genMap(x, y);
         } else if(mv.equalsIgnoreCase("w")) {
             y--;
             System.out.println(y);
             System.out.println("west");
+            genMap(x, y);
         } else { System.out.println("\033[31;1m[-Unknown Option-]\033[31;0m"); player(hero, x, y); }
         sc.close();
     }
